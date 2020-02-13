@@ -25,5 +25,5 @@ export function isProduction(): boolean {
 export const config = {
     DATABASE: isProduction() ? PRODUCTION_CONFIGURATION : LOCAL_CONFIGURATION,
     PORT_APP: 8080,
-    SECRET: env.SECRET,
+    SECRET: "SGAHS&*HJON%##*)IG353ASGY*G*&(A)",
 };

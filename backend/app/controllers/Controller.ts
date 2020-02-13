@@ -1,4 +1,5 @@
 import * as express from "express";
+import { log } from "util";
 
 export abstract class Controller {
 
@@ -9,5 +10,4 @@ export abstract class Controller {
         this.req = req;
         this.res = res;
     }
-
 }
