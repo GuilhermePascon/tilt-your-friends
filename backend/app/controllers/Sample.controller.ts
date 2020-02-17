@@ -3,6 +3,7 @@ import { Sample } from "../models";
 import { SampleService } from "../services";
 import { Controller } from "./Controller";
 
+
 export class SampleController extends Controller {
 
     private sampleService: SampleService;
@@ -66,6 +67,11 @@ export class SampleController extends Controller {
         } catch (ex) {
             return this.res.status(404).send({ text: "ERROR" });
         }
+    }
+
+    public async teste(): Promise<Response> {
+        console.log('it works!!');
+        return this.res.status(200).send('testing');
     }
 
 }

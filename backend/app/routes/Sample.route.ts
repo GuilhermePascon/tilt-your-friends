@@ -11,6 +11,7 @@ export class SampleRouter extends Router {
             .get("/:id", this.handler(SampleController.prototype.find))
             .post("/", [ Validator(createSample) ], this.handler(SampleController.prototype.create))
             .put("/", [ Validator(updateSample) ],  this.handler(SampleController.prototype.update))
-            .delete("/", [ Validator(deleteSample) ], this.handler(SampleController.prototype.delete));
+            .delete("/", [ Validator(deleteSample) ], this.handler(SampleController.prototype.delete))
+            .post("/teste", SampleController.prototype.teste);
     }
 }

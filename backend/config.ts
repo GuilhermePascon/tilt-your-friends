@@ -7,7 +7,7 @@ const LOCAL_CONFIGURATION = {
     USER_DB: "postgres",
     PASSWORD: "1234",
     PORT_DB: 5432,
-    SERVER: "127.0.0.1",
+    SERVER: "127.0.0.1:4200/127.0.0.1",
 };
 
 const PRODUCTION_CONFIGURATION = {
@@ -23,7 +23,8 @@ export function isProduction(): boolean {
 }
 
 export const config = {
-    DATABASE: isProduction() ? PRODUCTION_CONFIGURATION : LOCAL_CONFIGURATION,
+    // DATABASE: isProduction() ? PRODUCTION_CONFIGURATION : LOCAL_CONFIGURATION,
+    DATABASE: LOCAL_CONFIGURATION,
     PORT_APP: 8080,
     SECRET: "SGAHS&*HJON%##*)IG353ASGY*G*&(A)",
 };
